@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+header {
+  display: flex;
+  font-family: "Rozha One", serif;
+  color: #fff;
+  font-size: 2rem;
+}
+header .logo {
+  z-index: 1;
+  margin-left: 30px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+}
+li {
+  list-style-type: none;
+}

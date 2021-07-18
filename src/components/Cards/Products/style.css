@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Roboto+Condensed:wght@300;400&display=swap");
+
+.container-card-products {
+  font-family: "Rozha One", serif;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 50px;
+  text-align: center;
+}
+/* Posicionar Cards */
+.itens-cards {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Poppins", sans-serif;
+}
+.card-container {
+  position: relative;
+  color: #fff;
+  width: 340px;
+  height: 450px;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0rem 1rem;
+  backface-visibility: hidden;
+  transition: 0.8s;
+}
+
+.face-1 {
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  transform-origin: right;
+  transform: translate(0%) perspective(0px) rotatey(0deg);
+}
+
+.face-2 {
+  background-image: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  font-size: 1rem;
+  transform-origin: left;
+  transform: translateX(100%) perspective(1000px) rotateY(100deg);
+}
+
+img {
+  width: 100%;
+}
+
+.card-container:hover .face-1 {
+  transform: translate(-100%) perspective(0px) rotatey(-100deg);
+}
+
+.card-container:hover .face-2 {
+  transform: translate(0%) perspective(0px) rotateY(0deg);
+}
+
+.top-part {
+  margin-top: 20px;
+}
+
+.face-1 .top-part > p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: left;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: 2px; /*Espaçamento entre caracteres*/
+  margin: 0rem 0 0.6rem;
+  transform: translatez(50px);
+  transform-style: preserve-3d;
+}
+
+.shoe-through {
+  text-decoration: line-through;
+  font-size: 0.8rem;
+}
+
+.shoe-info {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.shoe-new {
+  margin-right: 0.8rem;
+  padding: 0.1rem;
+  background-color: #fff;
+  color: rgb(30, 35, 66);
+  border-radius: 3px;
+  text-transform: uppercase;
+  transform: translatez(40px);
+  transform-style: preserve-3d;
+}
+
+.shoe-year {
+  color: #eee;
+  transform: translatez(40px);
+  transform-style: preserve-3d;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.bottom-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-part .shoe-price {
+  font-size: 2rem;
+  display: flex;
+  transform: translatez(35px);
+  transform-style: preserve-3d;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.bottom-part .shoe-price span {
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+
+.right-arrow {
+  width: 40px;
+  padding-top: 0.3rem;
+  transform: translatez(45px);
+  transform-style: preserve-3d;
+}
+
+.right-arrow img {
+  animation: move 0.5s infinite ease alternate;
+  filter: invert(1);
+}
+
+@keyframes move {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-family: "Roboto Condensed", sans-serif;
+  transform: translatez(35px);
+  transform-style: preserve-3d;
+}
+.features {
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem 0 1rem 0;
+  transform: translatez(40px);
+  transform-style: preserve-3d;
+}
+.features li {
+  margin-bottom: 0.2rem;
+}
+.color-wrap {
+  display: flex;
+  align-items: center;
+}
+.color-wrap > span {
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin-right: 1.3rem;
+  transform: translatez(45px);
+  transform-style: preserve-3d;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+.color {
+  z-index: 3;
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.color.blue {
+  background-color: #2980b9;
+  border: 4.5px solid #2980b9;
+}
+
+.color.black {
+  background-color: #333;
+  border: 4.5px solid #333;
+}
+
+.color.white {
+  background-color: #ccc;
+  border: 4.5px solid #ccc;
+}
+
+.color.active {
+  border: 4.5px solid #fff;
+}
+
+.color:hover {
+  transform: scale(1.3);
+}
+
+.buy-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.buy {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background-color: #f9cf13;
+  border-radius: 4px;
+  color: #000;
+  transition: background-color 0.3s, opacity 0.7s !important;
+  transform: translatez(45px);
+  transform-style: preserve-3d;
+}
+
+.buy:hover {
+  background-color: #2875a9;
+}
+
+.face-1 .hide {
+  opacity: 1;
+  transition: 0.7s;
+}
+
+.face-2 .hide {
+  opacity: 0;
+  transition: 0.7s;
+}
+.card-container:hover .face-2 .hide {
+  opacity: 1;
+}
+.card-container:hover .face-1 .hide {
+  opacity: 0;
+}
+/* Image */
+.shoe-image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+.shoe-img {
+  z-index: 2;
+  position: absolute;
+  width: 150%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -55%) translateZ(200px);
+  transform-style: preserve-3d;
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+  animation: float 2s alternate ease-in-out infinite;
+  transition: 0.65s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(calc(-45% - 5px)) translateY(calc(-55% - 5px))
+      translateZ(200px);
+  }
+  100% {
+    transform: translateX(calc(-45% + 5px)) translateY(calc(-55% + 5px))
+      translateZ(400px);
+  }
+}
+
+.shoe {
+  transform: rotate(-30deg);
+  transition: 0.6s;
+}
+
+.card-container:hover .shoe-img {
+  width: 120%;
+  top: 67%;
+}
+
+.card-container:hover .shoe {
+  transform: rotate(-17deg);
+}

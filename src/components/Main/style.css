@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+.title {
+  transform: rotate(-10deg);
+  font-family: "Rozha One", serif;
+}
+.title .box-title {
+  padding: 0px 10px;
+  font-size: 7rem;
+  color: #10131c;
+  height: 100px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin-bottom: -10px;
+}
+.title .box-title p {
+  margin-left: 20px;
+}
+.title span {
+  margin-top: 0px;
+  margin-left: 200px;
+  font-size: 4rem;
+  color: #f9cf13;
+}
+.container-main {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-main img {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+}

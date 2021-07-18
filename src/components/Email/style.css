@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+.title-box-email {
+  font-size: 2rem;
+  color: #fff;
+  margin: 50px auto;
+  text-align: center;
+  font-family: "Rozha One", sans-serif;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+.box-email {
+  background-color: #f9cf13;
+  height: 300px;
+  width: 90%;
+  font-family: "Rozha One", sans-serif;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 51px;
+  letter-spacing: 0.1em;
+}
+.box-email div {
+  margin-top: 40px;
+}
+.email-form {
+  justify-content: center;
+  display: flex;
+}
+.box-email .email-form input {
+  width: 40%;
+  padding: 20px;
+  border: none;
+}
+.box-email .email-form button {
+  cursor: pointer;
+  padding: 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #10131c;
+  font-family: "Rozha One", sans-serif;
+  border: none;
+}
