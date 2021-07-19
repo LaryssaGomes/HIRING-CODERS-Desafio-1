@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Rozha+One&display=swap");
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  font-family: "Rozha One", sans-serif;
+  justify-content: space-around;
+}
+footer p {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+#footer-logo {
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 250px;
+}
+#footer-contacto {
+  margin-right: 20px;
+  max-width: 300px;
+}
+#social-icons {
+  margin-top: 20px;
+  display: flex;
+}
+#social-icons svg {
+  cursor: pointer;
+  width: 30px;
+  margin-right: 20px;
+  transition: all 0.5s;
+}
+#social-icons svg:hover {
+  color: #f9cf13;
+  animation: move 0.5s ease alternate;
+  animation-iteration-count: 2;
+}
+@keyframes move {
+  0% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  #footer-contacto {
+    margin-left: 20px;
+    margin-top: 20px;
+    max-width: 250px;
+  }
+  footer {
+    justify-content: center;
+  }
+  #footer-siga {
+    margin-top: 20px;
+  }
+}

@@ -24,10 +24,19 @@
 }
 .container-main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .container-main img {
   object-fit: cover;
   width: 400px;
   height: 400px;
+}
+@media (max-width: 768px) {
+  .title {
+    transform: scale(0.7) rotate(-10deg);
+  }
+  .container-main img {
+    transform: scale(0.7);
+  }
 }

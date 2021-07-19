@@ -9,6 +9,7 @@ class Background extends React.Component {
         <div id="main-item">{this.props.mainElement}</div>
         <div className="card-item">{this.props.cardElement}</div>
         <div id="email-item">{this.props.emailElement}</div>
+        <div id="footer-item">{this.props.footerlElement}</div>
         <div className="star">
           <div className="vertical-line"></div>
           <div className="horizontal-line"></div>
@@ -42,6 +43,10 @@ class Background extends React.Component {
           <div className="horizontal-line"></div>
         </div>
         <div className="star star7">
+          <div className="vertical-line"></div>
+          <div className="horizontal-line"></div>
+        </div>
+        <div className="star star8">
           <div className="vertical-line"></div>
           <div className="horizontal-line"></div>
         </div>

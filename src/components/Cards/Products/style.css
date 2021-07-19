@@ -12,10 +12,12 @@
 .itens-cards {
   margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   font-family: "Poppins", sans-serif;
 }
 .card-container {
+  margin-top: 30px;
   position: relative;
   color: #fff;
   width: 340px;
@@ -196,7 +198,7 @@ img {
 .colors {
   display: flex;
   align-items: center;
-  z-index: 3;
+  transform: translatez(45px);
 }
 
 .color {
@@ -208,6 +210,7 @@ img {
   margin-right: 0.6rem;
   cursor: pointer;
   transition: 0.3s;
+  transform: translatez(45px);
 }
 
 .color.blue {
@@ -237,9 +240,12 @@ img {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 20px;
+  z-index: 10;
+  transform: translatez(45px);
 }
 
 .buy {
+  z-index: 10;
   display: inline-block;
   padding: 0.2rem 0.8rem;
   background-color: #f9cf13;
@@ -251,7 +257,7 @@ img {
 }
 
 .buy:hover {
-  background-color: #2875a9;
+  background-color: #aa8d0d;
 }
 
 .face-1 .hide {
@@ -280,7 +286,7 @@ img {
   pointer-events: none;
 }
 .shoe-img {
-  z-index: 2;
+  z-index: -1;
   position: absolute;
   width: 150%;
   top: 50%;
@@ -295,11 +301,11 @@ img {
 @keyframes float {
   0% {
     transform: translateX(calc(-45% - 5px)) translateY(calc(-55% - 5px))
-      translateZ(200px);
+      translateZ(10px);
   }
   100% {
     transform: translateX(calc(-45% + 5px)) translateY(calc(-55% + 5px))
-      translateZ(400px);
+      translateZ(20px);
   }
 }
 
@@ -315,4 +321,20 @@ img {
 
 .card-container:hover .shoe {
   transform: rotate(-17deg);
+}
+@media (max-width: 768px) {
+  .itens-cards {
+    margin-top: 0px;
+    justify-content: center;
+  }
+  .card-container {
+    transform: scale(0.7);
+    margin-top: 0px;
+  }
+  .container-card-products {
+    margin-top: 10px;
+  }
+  .container-card-products p {
+    font-size: 1.4rem;
+  }
 }
